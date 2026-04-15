@@ -1,12 +1,13 @@
-package com.example.dnd_ai_backend.dto;
+package com.example.dnd_ai_backend.dto.common;
 
-import java.util.List;
+import java.util.Map;
 
 import tools.jackson.databind.PropertyNamingStrategies;
 import tools.jackson.databind.annotation.JsonNaming;
 
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-public record OptionSet(
-        String optionSetType,
-        List<OptionEntry> options
+public record DamageDto(
+        ApiReferenceDto damageType,
+        Map<String, String> damageAtSlotLevel
 ) {}
+

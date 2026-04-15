@@ -1,9 +1,11 @@
-package com.example.dnd_ai_backend.dto;
+package com.example.dnd_ai_backend.dto.common;
 
 import tools.jackson.databind.PropertyNamingStrategies;
 import tools.jackson.databind.annotation.JsonNaming;
 
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-public record ConditionImmunity(
-        ApiReference condition
+public record DcDto(
+        ApiReferenceDto dcType,
+        String dcSuccess,
+        String desc
 ) {}
