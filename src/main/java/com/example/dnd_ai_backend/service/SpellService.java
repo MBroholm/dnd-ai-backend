@@ -1,5 +1,6 @@
 package com.example.dnd_ai_backend.service;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -10,7 +11,7 @@ import com.example.dnd_ai_backend.dto.spell.SpellListResponse;
 public class SpellService {
     private final WebClient dndClient;
 
-    public SpellService(WebClient dndClient) {
+    public SpellService(@Qualifier("dndClient") WebClient dndClient) {
         this.dndClient = dndClient;
     }
 

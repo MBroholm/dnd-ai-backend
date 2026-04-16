@@ -7,7 +7,7 @@ import tools.jackson.databind.annotation.JsonNaming;
 
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public record DamageDto(
-        ApiReferenceDto damageType,
-        Map<String, String> damageAtSlotLevel
-) {}
-
+                ApiReferenceDto damageType,
+                Map<String, String> damageAtSlotLevel,
+                Map<String, String> damageAtCharacterLevel) {
+}

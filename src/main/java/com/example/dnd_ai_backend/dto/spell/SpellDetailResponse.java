@@ -12,25 +12,25 @@ import tools.jackson.databind.annotation.JsonNaming;
 
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public record SpellDetailResponse(
-        String index,
-        String name,
-        List<String> desc,
-        List<String> higherLevel,
-        String range,
-        List<String> components,
-        String material,
-        boolean ritual,
-        String duration,
-        boolean concentration,
-        String castingTime,
-        int level,
-        DamageDto damage,
-        DcDto dc,
-        AreaOfEffectDto areaOfEffect,
-        ApiReferenceDto school,
-        List<ApiReferenceDto> classes,
-        List<ApiReferenceDto> subclasses,
-        String url,
-        String updatedAt
-) {}
-
+                String index,
+                String name,
+                List<String> desc,
+                List<String> higherLevel,
+                String range,
+                List<String> components,
+                String material,
+                boolean ritual,
+                String duration,
+                boolean concentration,
+                String castingTime,
+                int level,
+                String attackType,
+                DamageDto damage,
+                DcDto dc,
+                AreaOfEffectDto areaOfEffect,
+                ApiReferenceDto school,
+                List<ApiReferenceDto> classes,
+                List<ApiReferenceDto> subclasses,
+                String url,
+                String updatedAt) {
+}

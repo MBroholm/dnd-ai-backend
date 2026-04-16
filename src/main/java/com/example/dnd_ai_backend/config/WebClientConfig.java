@@ -19,4 +19,11 @@ public class WebClientConfig {
                 .build();
     }
 
+    @Bean
+    public WebClient chatGptClient(WebClient.Builder builder, ChatGptConfig config) {
+        return builder
+                .baseUrl(config.getUrl())
+                .defaultHeader("Authorization", "Bearer " + config.getApiKey())
+                .build();
+    }
 }
