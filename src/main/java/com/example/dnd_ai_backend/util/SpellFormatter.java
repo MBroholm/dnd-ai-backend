@@ -6,6 +6,9 @@ import com.example.dnd_ai_backend.dto.common.DcDto;
 import com.example.dnd_ai_backend.dto.common.AreaOfEffectDto;
 
 public class SpellFormatter {
+    private SpellFormatter() {
+        /* This utility class should not be instantiated */
+    }
 
     public static String format(SpellDetailResponse spell) {
 

@@ -47,20 +47,12 @@ public class AiSpellController {
                 %s
                 """.formatted(spellText);
 
-        System.out.println("Prompt sent to ChatGPT:\n" + prompt);
-
         // 3. Build ChatGPT request
         ChatGptRequest.Message userMessage = new ChatGptRequest.Message("user", prompt);
         List<ChatGptRequest.Message> messages = List.of(userMessage);
 
         ChatGptResponse response = chatGptService.sendRequest(messages);
 
-        System.out.println(response
-                .getChoices()
-                .get(0)
-                .getMessage()
-                .getContent());
-                
         // 4. Return the AI's explanation
         return response
                 .getChoices()
