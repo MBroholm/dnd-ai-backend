@@ -1,5 +1,6 @@
 package com.example.dnd_ai_backend.controller;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,7 @@ import com.example.dnd_ai_backend.service.SpellService;
 
 @RestController
 @RequestMapping("/spells")
+@CrossOrigin(origins = "*")
 public class SpellController {
 
     private final SpellService spellService;

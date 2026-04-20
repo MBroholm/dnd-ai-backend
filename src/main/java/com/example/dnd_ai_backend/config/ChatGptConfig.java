@@ -16,7 +16,7 @@ public class ChatGptConfig {
     private String url = "https://api.openai.com/v1/chat/completions";
     private String model = "gpt-4o-mini";
     private Double temperature = 0.8;
-    private Integer maxTokens = 300;
+    private Integer maxTokens = 500;
     private Double topP = 1.0;
     private Double frequencyPenalty = 0.0;
     private Double presencePenalty = 0.0;
